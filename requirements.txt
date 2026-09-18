@@ -5,3 +5,4 @@ Pillow>=10.0.0
 langgraph>=0.2.0
 langchain-core>=0.3.0
 typing_extensions>=4.0.0
+python-dotenv>=1.0.0

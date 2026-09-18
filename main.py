@@ -54,6 +54,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Literal, Optional
 
+from dotenv import load_dotenv
 from langgraph.graph import END, StateGraph
 
 from agent import decide_next_step
@@ -593,6 +594,7 @@ async def run_agent(args: argparse.Namespace) -> None:
     # -----------------------------------------------------------------
     # Resolve API key
     # -----------------------------------------------------------------
+    load_dotenv()
     api_key = os.environ.get("GOOGLE_API_KEY", "")
     if not api_key and not args.demo_mode:
         logger.error(
